@@ -36,6 +36,5 @@ public class PlayerMover : MonoBehaviour
 
         _rigidbody.MovePosition(transform.position + transform.forward * verticalMove);
     }
-
 }
 
