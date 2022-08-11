@@ -51,6 +51,15 @@ public class Passenger : MonoBehaviour
     {
         _rigidbody.useGravity = true;
     }
+    
+    public IEnumerator MoveToTarget(Transform targetPosition, float movementSpeed)
+    {
+        while (transform.position != targetPosition.position)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition.position, movementSpeed * Time.fixedDeltaTime);
+            yield return null;
+        }
+    }
 
     private void PushInRandomDirection(Vector3 direction)
     {
@@ -64,15 +73,6 @@ public class Passenger : MonoBehaviour
 
         yield return waitForSeconds;
         _rigidbody.isKinematic = true;
-    }
-
-    public IEnumerator MoveToTarget(Transform targetPosition, float movementSpeed)
-    {
-        while (transform.position != targetPosition.position)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition.position, movementSpeed * Time.fixedDeltaTime);
-            yield return null;
-        }
     }
 
     private IEnumerator Move()
