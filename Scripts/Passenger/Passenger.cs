@@ -47,16 +47,6 @@ public class Passenger : MonoBehaviour
         _isInTrain = true;
     }
 
-    public IEnumerator MakeIsKinematic()
-    {
-        float delay = 0.5f;
-        WaitForSeconds waitForSeconds = new WaitForSeconds(delay);
-
-        yield return waitForSeconds;
-        _rigidbody.isKinematic = true;
-    }
-
-
     public void MakeGravity()
     {
         _rigidbody.useGravity = true;
@@ -65,6 +55,15 @@ public class Passenger : MonoBehaviour
     private void PushInRandomDirection(Vector3 direction)
     {
         _rigidbody.AddForce(direction * _repulsiveForce, ForceMode.Force);
+    }
+    
+    public IEnumerator MakeIsKinematic()
+    {
+        float delay = 0.5f;
+        WaitForSeconds waitForSeconds = new WaitForSeconds(delay);
+
+        yield return waitForSeconds;
+        _rigidbody.isKinematic = true;
     }
 
     public IEnumerator MoveToTarget(Transform targetPosition, float movementSpeed)
