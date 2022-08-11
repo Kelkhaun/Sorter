@@ -124,7 +124,6 @@ public class Vagon : MonoBehaviour
         }
     }
 
-
     private IEnumerator CloseDoor(float endValue1, float endValue2)
     {
         float delay = 0.43f;
