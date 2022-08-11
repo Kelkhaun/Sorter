@@ -103,6 +103,7 @@ public class Vagon : MonoBehaviour
             PassengerEnteredTheVagon?.Invoke(_passengersNumberInVagon, _vagonCapacity, _currentPassenger, this);
         }
     }
+    
     public IEnumerator OpenDoor()
     {
         float delay = 2.1f;
