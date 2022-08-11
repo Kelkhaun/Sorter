@@ -42,7 +42,6 @@ public class Passenger : MonoBehaviour
         _rigidbody.AddForce(targetPoint * throwForce, ForceMode.Acceleration);
     }
 
-
     public void EnableBeingOnTheTrain()
     {
         _isInTrain = true;
