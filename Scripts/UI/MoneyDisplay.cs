@@ -6,7 +6,6 @@ public class MoneyDisplay : MonoBehaviour
     [SerializeField] MoneyImage _image1;
     [SerializeField] MoneyImage _image2;
     [SerializeField] Vagon[] _vagons;
-
     [SerializeField] private List<Transform> _points;
 
     private void OnEnable()
