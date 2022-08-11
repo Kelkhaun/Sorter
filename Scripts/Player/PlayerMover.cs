@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Player))]
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMover : MonoBehaviour
 {
