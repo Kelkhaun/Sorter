@@ -23,7 +23,6 @@ public class Passenger : MonoBehaviour
         _move = StartCoroutine(Move());
     }
 
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.TryGetComponent(out Player player))
