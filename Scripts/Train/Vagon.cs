@@ -58,7 +58,6 @@ public class Vagon : MonoBehaviour
                 VagonIsFull?.Invoke();
                 _vagonExpander.ExpandTheVagon();
 
-
                 if (_train.CurrentVagon == _secondVagon)
                     _vagonExpander.NarrowVagon();
 
