@@ -14,12 +14,12 @@ public class Pusher : MonoBehaviour
 
     private void OnEnable()
     {
-        _train.TrainIsFull += OnTrainFull;
+        _train.TrainIsFull += DeactivateCollider;
     }
 
     private void OnDisable()
     {
-        _train.TrainIsFull -= OnTrainFull;
+        _train.TrainIsFull -= DeactivateCollider;
     }
 
     private void Start()
@@ -36,7 +36,7 @@ public class Pusher : MonoBehaviour
         }
     }
 
-    private void OnTrainFull()
+    private void DeactivateCollider()
     {
         _collider.enabled = false;
     }
